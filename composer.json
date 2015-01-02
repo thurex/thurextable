@@ -1,0 +1,17 @@
+{
+    "name": "thurex/thurextable",
+    "description": "A HTML helper for simple tables",
+    "authors": [
+      {
+        "name": "Tomas Turesson",
+        "email": "info@thurex.net",
+        "role": "Student"
+      }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "thurex\\": "src/" }
+    }
+}
