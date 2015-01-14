@@ -1,3 +1,7 @@
+<?php /**
+ * An example of use for the Anax MVC
+ */
+?>
 <link rel="stylesheet" href="/thurexstyles.php">
 <hr>
 
@@ -9,13 +13,13 @@
                             array("2", "Leif", "Thuresson"),
                             array("3", "Åsa", "Blomster"));
     $class = array('styleTable'=>null, 'styleTd'=>null, 'styleTrTh'=>null, 'styleTrOdd'=>'highlight', 'styleTrEven'=>'highlight', 'styleTh'=>null);
-    $table = new \Anax\ThurexTables\CSimpleTable($tableContent, 'defaultStyle');
+    $table = new \Anax\ThurexTable\CSimpleTable($tableContent, 'defaultStyle');
     echo "<h3>Default table: defaultStyle</h3>";
     echo $table->getHTML();
-    $table = new \Anax\ThurexTables\CSimpleTable($tableContent, 'greenStyle', $class);
+    $table = new \Anax\ThurexTable\CSimpleTable($tableContent, 'greenStyle', $class);
     echo "<h3>Table with color: greenStyle, with css class: highlight</h3>";
     echo $table->getHTML();
-    $table = new \Anax\ThurexTables\CSimpleTable($tableContent, 'grayStyle', $class);
+    $table = new \Anax\ThurexTable\CSimpleTable($tableContent, 'grayStyle', $class);
     echo "<h3>Table without color: grayStyle, with css class: highlight</h3>";
     echo $table->getHTML();
     

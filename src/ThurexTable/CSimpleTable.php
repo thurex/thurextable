@@ -1,6 +1,7 @@
 <?php
 
-namespace Anax\ThurexTables;
+namespace thurex\ThurexTable;
+use Exception;
 
 /**
  * A helper to create tables.
@@ -32,15 +33,32 @@ class CSimpleTable {
         //$class = array('styleTable'=>null, 'styleTd'=>null, 'styleTrTh'=>null, 'styleTrOdd'=>null, 'styleTrEven'=>null, 'styleTh'=>null);
         $this->class = $class;
         $this->tableContent = $tableContent;
-        if (isset($style)){
-            try{
-                $this->$style();
-            } catch (Exception $ex) {
-                echo $ex;
-            }
-        }       
+        
+        if ($class != null){
+            try {
+                $this->fillClass($class);
+                $this->class=$class;
+            } catch (\Exception $ex) {
+            }    
+        }
+        if (method_exists($this, $style)){
+            $this->$style();
+        }
+        else {
+            $this->defaultStyle();
+        }
     }
     
+    private function fillClass($class){
+        if (count($class)!=6){
+            throw new Exception("Wrong input of class -array");
+        }
+        else {
+            $this->class=$class;
+        }
+    }
+
+
     /**
      * 
      * @return String $html, html code
@@ -53,6 +71,7 @@ class CSimpleTable {
         for ($header=0; $header<$maxWidth; $header++){
             $html .= "<th {$this->styleTh}> {$this->tableContent[0][$header]} </th>";
         }
+        $html .= "</tr>";
         for ($row = 1; $row < $maxHeight; $row++) {
             if ($row%2>0){
                 $html .= "<tr $this->styleTrEven>";

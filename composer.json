@@ -1,6 +1,7 @@
 {
     "name": "thurex/thurextable",
     "description": "A HTML helper for simple tables",
+    "license": "MIT",
     "authors": [
       {
         "name": "Tomas Turesson",
