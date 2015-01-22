@@ -95,7 +95,7 @@ class CSimpleTable {
     private function defaultStyle(){
         $this->styleTable = null;
         $this->styleTd = null;
-        $this->styleTr = null;
+        $this->styleTrTh = null;
         $this->styleTh = null;                
     }
     
