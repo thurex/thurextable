@@ -1,6 +1,6 @@
 <?php
 
-namespace thurex\thurexTable;
+namespace thurex\ThurexTable;
 
 class CSimpleTest extends \PHPUnit_Framework_TestCase{
     
