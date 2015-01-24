@@ -23,8 +23,8 @@ class CSimpleTable {
     /**
      * 
      * @param String array $tableContent, content to fill table
-     * @param String $style, call for method of style
-     * @param String array $class, css classes for different html prefix
+     * @param String $style , call for method of style
+     * @param String array $class , css classes for different html prefix
      * 
      * Fill $class in call as follow:
      * //$class = array('styleTable'=>null, 'styleTd'=>null, 'styleTrTh'=>null, 'styleTrOdd'=>null, 'styleTrEven'=>null, 'styleTh'=>null);
