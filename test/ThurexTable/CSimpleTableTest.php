@@ -10,9 +10,9 @@ class CSimpleTest extends \PHPUnit_Framework_TestCase{
         $arrayToSend = array(array('head1','head2','head3'),
                             array('value1','value2','value3'),
                             array('value4','value5','value6'));
-        $this->simpleTables[] = new \thurex\thurexTable\CSimpleTable($arrayToSend, 'defaultStyle');
-        $this->simpleTables[] = new \thurex\thurexTable\CSimpleTable($arrayToSend, 'somethingelse');
-        $this->simpleTables[] = new \thurex\thurexTable\CSimpleTable($arrayToSend, 'greenStyle');
+        $this->simpleTables[] = new \thurex\ThurexTable\CSimpleTable($arrayToSend, 'defaultStyle');
+        $this->simpleTables[] = new \thurex\ThurexTable\CSimpleTable($arrayToSend, 'somethingelse');
+        $this->simpleTables[] = new \thurex\ThurexTable\CSimpleTable($arrayToSend, 'greenStyle');
     }
     
     public function tearDown(){
